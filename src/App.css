@@ -1,39 +1,152 @@
 .App {
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  background: #ccc;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+}
+
+.heading {
+  display: block;
+  color: #3f4964;
+  font-size: 35px;
+}
+
+.App > .container {
+  background: #3f4964;
+  border-radius: 20px;
+  padding: 50px;
+  height: 35vh;
+  min-width: 40vw;
+}
+
+/* Extra small devices (phones, 600px and down)  */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (max-width: 857px) {
+  .App {
+    padding: 20px;
+  }
+  .App > .container {
+    border-radius: 20px;
+    padding: 10px;
+    min-height: 65vh;
+    min-width: 80vw;
+  }
+  .level-option {
+    padding: 10px 20px;
+    margin: 30px 20px 20px;
+  }
+  .level-choice {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .answers {
+    flex-direction: column;
+  }
+  .answers button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  .heading h1 {
+    font-size: 35px;
+  }
+  .level-header h1 {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 849px) and (max-width: 1151px) {
+  .App > .container {
+    border-radius: 20px;
+    padding: 30px;
+    min-height: 50vh;
+    min-width: 40vw;
+  }
+  .answers {
+    flex-direction: column;
+  }
+  .answers button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .heading h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.answers {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+button {
+  display: block;
+  padding: 20px 40px;
+  margin: 40px 20px 20px 20px;
+  border-radius: 20px;
+  outline: none;
+  box-shadow: 0px 0px #3552a3;
+  text-align: center;
+  min-width: 200px;
+  border: 5px solid #b6afb9;
+  font-size: 18px;
+}
+
+button:hover {
+  box-shadow: 0 0px 20px #fff;
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+.level {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.level-header {
+  font-size: 22px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
-
-.App-header {
-  min-height: 100vh;
+.level-choice {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-evenly;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
-}
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px)
-  }
-  100% {
-    transform: translateY(0px)
-  }
+.newGameButton {
+  display: block;
 }
